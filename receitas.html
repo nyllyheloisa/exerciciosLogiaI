@@ -1,0 +1,30 @@
+<meta charset="UFT-8">
+
+<script>
+
+    var igredientes = [];
+    var numeroDeIgredientes = parseInt(prompt("infforme o numero de igredientes"));
+    var numero = 1;
+
+    while(numero <= numeroDeIgredientes) {
+        var igrediente = prompt("Informe o igrediente " + numero);
+        var jaTem = false;
+
+        for(var i = 0; i < igredientes.length; i++) {
+            if(igrediente == igredientes[i]) {
+                jaTem = true;
+                break;
+
+            } 
+        }
+
+        if(jaTem == false) {
+            
+            igredientes.push(igrediente);
+            numero++
+        }
+
+    }
+
+
+</script>

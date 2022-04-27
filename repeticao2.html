@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+
+    function pularLinha(numeroDeLinhas) {
+        document.write("<br>")
+        var saltaLinhas = ""
+
+        for(var i = 1; i <= numeroDeLinhas; i++) {
+            saltaLinhas += document.write("<br>")
+        }
+    }
+
+    function mostrar(frase) {
+        document.write(frase)
+        pularLinha()
+    }
+
+    var numeroDeFamiliares = parseInt(prompt("Digite o numero de familiares"))
+    var contadorF = 1
+    var idade = 0
+    while(contadorF <= numeroDeFamiliares) {
+
+        idade += parseInt(prompt("Digite a idade dos familiares"));
+        contadorF++;
+
+    }
+
+    var mediaIdade = idade / numeroDeFamiliares
+    mostrar(mediaIdade)
+
+    for(var linha = 1; linha <= 3; linha++) {
+        
+        for(var coluna = 1; coluna <= 10; coluna++) {
+            document.write("*")
+        }
+        pularLinha()
+    }
+    
+</script>

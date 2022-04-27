@@ -1,0 +1,47 @@
+
+<meta charset="UTF-8">
+
+<script>
+
+
+    function pularLinha(numeroDeLinhas) {
+        document.write("<br>")
+        var saltaLinhas = ""
+
+        for(var i = 1; i <= numeroDeLinhas; i++) {
+            saltaLinhas += document.write("<br>")
+        }
+    }
+
+    function mostrar(frase) {
+        document.write(frase)
+    }
+
+    var numeroSorteado = Math.round(Math.random() * 10);
+    console.log(numeroSorteado);
+
+    var chute = parseInt(prompt("Escolha um numero, você tem 3 chances."));
+    var tentativas = 2
+
+    while(tentativas > 0) {
+        if(chute == numeroSorteado) {
+            mostrar("Parabéns! Você acertou o numero");
+            break;
+
+        } else if(chute > numeroSorteado) {
+            chute = parseInt(prompt("Você errou, o numero é menor. Escolha outro numero, você ainda tem " + tentativas + " chances"));
+            tentativas--;
+
+        } else {
+            chute = parseInt(prompt("Você errou, o numero é maior. Escolha outro numero, você ainda tem " + tentativas + " chances"));
+            tentativas--;
+
+        }
+
+    }
+    if(chute != numeroSorteado) {
+        mostrar("Você perdeu, o numero escolhido era " + numeroSorteado);
+    } else {
+        mostrar(" d+")
+    }
+</script>

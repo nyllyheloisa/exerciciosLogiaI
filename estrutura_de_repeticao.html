@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+
+    function pularLinha(numeroDeLinhas) {
+        document.write("<br>")
+        var saltaLinhas = ""
+
+        for(var i = 1; i <= numeroDeLinhas; i++) {
+            saltaLinhas += document.write("<br>")
+        }
+    }
+
+    function mostrar(frase) {
+        document.write(frase)
+        pularLinha()
+    }
+
+    var anoCopa = 1930
+    
+    while(anoCopa<= 2022) {
+        mostrar("teve copa em" + anoCopa)
+        anoCopa += 4
+    }
+    
+    var contador = 0
+    while(contador <= 100) {
+        mostrar(contador)
+        contador += 2
+    }
+
+    var c = 30
+    while(30 <= 40) {
+        if(c == 33 || c == 37) {
+            c += 1
+        } else {
+            mostrar(c)
+            c += 1
+        }
+    }
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <script>
+
+        function pulaLinha(numeroDeLinhas) {
+
+            document.write("<br>")
+            var saltarLinha = ""
+
+            for(var i = 1; i <= numeroDeLinhas; i++) {
+                saltarLinha += document.write("<br>")
+            }
+        }
+
+        function mostrar(frase) {
+            document.write(frase)
+        }
+
+        function calculaImc(peso, altura) {
+            var imc = peso / (altura * altura);
+            return imc
+        }
+
+        var nome = prompt("Informe seu nome")
+        var alturaInformada = prompt(nome + " Informe sua altura")
+        var pesoInformado = prompt(nome + " Informe seu peso")   
+        var seuImc = calculaImc(pesoInformado, alturaInformada);
+        
+
+        if(seuImc < 18.5) {
+            mostrar("Você está abaixo do peso, seu imc é de " + seuImc);
+
+        } else if(seuImc > 18.5 && seuImc < 25) {
+            mostrar("Seu peso está normal, seu imc é de " + seuImc);
+
+        } else if(seuImc > 25 && seuImc < 30) {
+            mostrar("Você está com sobrepeso, seu imc é de " + seuImc);
+
+        } else if(seuImc > 30 && seuImc < 35) {
+            mostrar("Você está com obesidade grau I, seu imc é de " + seuImc);
+
+        } else if(seuImc > 35 && seuImc < 40) {
+            mostrar("Você está com obesidade grau II, seu imc é de " + seuImc)
+
+        } else if(seuImc > 40) {
+            mostrar("Você está com obesidade mórbida, seu imc é de " + seuImc)
+
+        } else {
+            mostrar("Algo deu errado, por favor insira um valor válido.")
+        }
+
+    </script>
+
+</body>
+</html>

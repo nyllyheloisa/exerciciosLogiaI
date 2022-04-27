@@ -1,0 +1,63 @@
+<meta charset="UFT-8">
+
+<input/>
+<button>chute</button>
+
+<script>
+    var chute = document.querySelector("input");
+    chute.focus();
+    
+    function numeroAleatorio() {
+        return Math.round(Math.random() * 11)
+    }
+    
+    function sorteiaNumero(quantidade) {
+        var segredos = []
+        var numero = 1
+        
+        while(numero <= quantidade) {
+            var numerosAleatorio = numeroAleatorio();
+            var achou = false;
+            
+            for(var i = 0; i < segredos.length; i++) {
+                if(numerosAleatorio ==  segredos[i]) {
+                    achou = true;
+                    break;
+                }
+            }
+            if(achou == false) {
+                segredos.push(numerosAleatorio);
+                numero++
+            }
+        }
+
+        return segredos;
+        console.log(segredos)
+    }
+    
+    var numerosSecretos = sorteiaNumero(5);
+    
+    function verificar() {
+        var achou = false;
+        for(var i = 0; i < numerosSecretos.length; i++) {
+
+            if(chute.value == numerosSecretos[i]) {
+                 alert("Voce acertou");
+                 achou = true;
+                 break;
+     
+            }
+        }
+        if(achou == false){
+            alert("Voce errou")
+
+        }
+
+        chute.value = ""     
+        chute.focus();  
+    }
+
+    var botao = document.querySelector("button")
+    botao.onclick = verificar
+
+</script>

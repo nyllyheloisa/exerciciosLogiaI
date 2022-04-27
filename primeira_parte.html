@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+
+<h1>Meu Primeiro Programa</h1>
+<br>
+<br>
+<p>Seria isso um programa? Descubra visitandoa Alura <a href= "http://www.alura.com.br">aqui</a></p><br>
+
+<script>
+    alert("Isso é um programa");
+
+    
+    function pulaLinha(numeroDeLinhas) {
+
+        document.write("<br>")
+        var linhasPraPular = ""     
+        for(var i = 0; i <= numeroDeLinhas; i++){
+
+            linhasPraPular += document.write("<br>")
+
+        }
+
+    }
+
+    //quando o mstra recebe um parametro dentro doos () ele vem parar em frase se transformando  em algo parecido com uma variavel
+    function mostrar(frase){
+
+        document.write("<big>" + frase + "</big>")
+
+    }
+
+    mostrar("Olá")
+
+    document.write("<h3>Concatenação</h3>")
+    pulaLinha()
+    document.write("As soma das idades é " + (20 + 50))
+    pulaLinha()
+    document.write("Eu acertei: " +  15/ 50 * 100 + "%") 
+
+    pulaLinha()
+
+    document.write("<h3>Álcool ou Gasolina?</h3>")
+
+        var tanque = 40
+        var distanciaComGasolina = 480
+        var distanciaComAlcool = 300
+        var consumoDeGasolina = distanciaComGasolina / tanque
+        var consumoDeAlcool = distanciaComAlcool / tanque
+
+        document.write("A gasolina faz " + consumoDeGasolina + " Km/L ") 
+        pulaLinha()   
+        document.write("Jáo álcool faz " + consumoDeAlcool + "  Km/L")
+        pulaLinha()
+    
+    mostrar("<h3>Quantidade de gerações nascidas dês da decoberta do Brasil</h3>")
+
+    var espacoDeTempo = 2022 - 1500
+    var geracoes = Math.round(espacoDeTempo/28)
+
+    pulaLinha()
+    mostrar("Até 2022, com base na média de  anos que um casal demora para ter filhos, são " + geracoes + " gerações.")
+
+</script>    
